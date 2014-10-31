@@ -1,6 +1,10 @@
 //mh meadowlark learning project 
 // testing github - add a few more words - one more change here
 
+//DOES NOT WORK
+//import oldworld from 'oldworld.js';
+//var fortunes = oldworld;
+
 var express = require('express');
 var app = express();
 
@@ -11,16 +15,23 @@ var handlebars = require('express3-handlebars')
 		app.set('view engine', 'handlebars');        //same as recommended
 
 var fortunes = [
-    "A bad peace is better than a good war. A shlekhter sholem iz beser vi a guter krig.",
-    "A bad penny always turns up.  A falsheh matba’ieh farliert men nit.",
+    "A bad peace is better than a good war.  ",
+    "A bad penny always turns up.  ",
     "A bad person is capable of doing anything bad (lit., what’s in the cards). Vos in der kort.", 
     "A blow is forgotten; a spoken word lingers on. A klap fargait, a vort bashtait.",
-	"A boil is fine as long as it’s under someone else’s arm.A geshvir iz a guteh zach bei yenem untern orem.",
-    "A broken spirit is hard to heal. A tserissen gemit iz shver tsum hailen.",
+	"A boil is fine as long as it’s under someone else’s arm.",
+    "A broken spirit is hard to heal.  ",
     "A child’s tears reach the heavens. A kind’s treren reissen himlen.",
-    "A child’s wisdom is also wisdom. A kindersher saichel iz oichet a saichel."
-	]; 
+    "A child’s wisdom is also wisdom.  ",
+    "Words should be weighed, not counted.",
+    "If his word were a stick, you couldn't lean on it.",
+    "If his word were a bridge, I'd be afraid to cross it.",
+    "No one sees the hump on his own back.",
+    "Everyone has his own burden.",
+    "Troubles are to man what rust is to iron."
+ 	]; 
 
+ 
 
 app.set('port', process.env.PORT || 3000);
 
