@@ -1,4 +1,17 @@
-var oldworld = [
+var  fortunesCookies = [
+"  A bad peace is better than a good war. ",
+"  A bad penny always turns up.  ", 
+"  A blow is forgotten; a spoken word lingers on. A klap fargait, a vort bashtait.",
+"  A boil is fine as long as it’s under someone else’s arm.",
+"  A broken spirit is hard to heal.  ",
+"  A child’s tears reach the heavens.",
+"  A child’s wisdom is also wisdom.  ",
+"  Words should be weighed, not counted.",
+"  If his word were a stick, you couldn't lean on it.",
+"  If his word were a bridge, I'd be afraid to cross it.",
+"  No one sees the hump on his own back.",
+"  Everyone has his own burden.",
+"  Troubles are to man what rust is to iron.",
 "  They are both in love: he with himself and she with herself.",
 "  Troubles are to man what rust is to iron.",
 "  The closer to the synagogue, the farther from God.",
@@ -35,4 +48,10 @@ var oldworld = [
 "  All of life is a war.",
 "  The worst peace is better than the best war.",
 "  The entire world rests on the tip of the tongue."
- ]; 
+ 	]; 
+
+exports.getFortune = function(){
+		var idx=Math.floor(Math.random() * forunteCookies.length);
+		return fortuneCookies[idx];
+		 	
+};
