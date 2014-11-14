@@ -34,5 +34,13 @@ var oldworld = [
 "  Neither cursing nor laughing can change the world.",
 "  All of life is a war.",
 "  The worst peace is better than the best war.",
-"  The entire world rests on the tip of the tongue."
- ]; 
+"  The entire world rests on the tip of the tongue.",
+"  When the heart is full, the eyes overflow.", 
+"  Delay is good for cheese but not for a wedding.",
+"  A child’s tears rend the heavens.",
+"  It’s never too late to die or get married.",
+"  Even in Paradise, it is not good to be alone.",
+"  The trip is never too hard, if you know you’re going home.",
+"  A child’s wisdom is also wisdom."
+ 
+]; 

@@ -1,7 +1,7 @@
 var  fortuneCookies = [
 "  A bad peace is better than a good war. ",
 "  A bad penny always turns up.  ", 
-"  A blow is forgotten; a spoken word lingers on. A klap fargait, a vort bashtait.",
+"  A blow is forgotten; a spoken word lingers on.",
 "  A boil is fine as long as it’s under someone else’s arm.",
 "  A broken spirit is hard to heal.  ",
 "  A child’s tears reach the heavens.",
@@ -47,7 +47,14 @@ var  fortuneCookies = [
 "  Neither cursing nor laughing can change the world.",
 "  All of life is a war.",
 "  The worst peace is better than the best war.",
-"  The entire world rests on the tip of the tongue."
+"  The entire world rests on the tip of the tongue.",
+"  When the heart is full, the eyes overflow.", 
+"  Delay is good for cheese but not for a wedding.",
+"  A child’s tears rend the heavens.",
+"  It’s never too late to die or get married.",
+"  Even in Paradise, it is not good to be alone.",
+"  The trip is never too hard, if you know you’re going home.",
+"  A child’s wisdom is also wisdom."
  	]; 
 
 

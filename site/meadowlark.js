@@ -11,17 +11,15 @@ var handlebars = require('express3-handlebars')
 
 var fortune = require('./lib/fortune.js');  //include array of fortunes or curses
 
-
- 
 app.set('port', process.env.PORT || 3000);
 
 //why this?   from p. 26
 app.use(express.static( __dirname + '/public'));
 
 //added per p. 42 for continuous testing
-app.use(function(req,res,next){
+app.use(function(req, res, next){
 	res.locals.showTests = app.get('env') !== 'production' && 
-	req.query.test ==='1';
+	req.query.test === '1';
 	next();
 	});  //followed by routes
 
@@ -37,6 +35,19 @@ app.get('/about', function(req, res){
 			fortune: fortune.getFortune(), pageTestScript: '/qa/tests-about.js' 
 		});
 });
+
+//hood-river page
+app.get('/tours/hood-river', function(req, res){
+		res.render('tours/hood-river');
+});
+
+//request group rate page
+app.get('/tours/request-group-rate', function(req, res){
+		res.render('tours/request-group-rate');
+});
+
+
+
 
 //404 catch all handler (middleware)
 app.use(function(req, res, next){
