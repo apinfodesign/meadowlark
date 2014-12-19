@@ -1,3 +1,5 @@
+//see below for random function getFortune
+
 var  fortuneCookies = [
 "  A bad peace is better than a good war. ",
 "  A bad penny always turns up.  ", 
@@ -62,3 +64,6 @@ var  fortuneCookies = [
  	var idx = Math.floor(Math.random() * fortuneCookies.length);
  		return fortuneCookies[idx];
  };	
+ 
+
+

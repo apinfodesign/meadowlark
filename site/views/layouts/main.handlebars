@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
-
+  
 <head>
 	<title>Meadowlark Travel</title>
-
 	{{#if showTests}}
 		<link rel="stylesheets" href="/vendor/mocha.css">
-	{{/if}}
+  	{{/if}}
 	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/vendor/style.css">  <!--find out best location for this-->
 </head>
 
 <body> 
        <header>
               <a href = "/" >
        	 	 <img src="/img/logo.png" alt="Meadowlark Travel Logo">
-                      <p><a href="/contact">Contact</href></p>
+                      
+          <p>  
+              <td><div class=menuBubble> <a href="/info">Information </href></a></div></td>
+              <td> &nbsp; &nbsp;</td>
+              <td><div class=menuBubble> <a href="/contact"> Contact </href> </a></div></td> 
+              <td>&nbsp;&nbsp;</td>
+              </div><td><div class=menuBubble> <a href="/surprise" > Surprise </href></a> </div></td>
+              <td>&nbsp;&nbsp; </td>
+              </div><td><div class=menuBubble> <a href="/about" > Wise Wisdom </href> </a></div></td> 
+              <td> &nbsp;&nbsp;</td>
+          </p>
        	</a>	
        </header>
 
@@ -28,6 +39,7 @@
        		mocha.ui('tdd');
    			var assert = chai.assert;
        	</script>
+
        	<script src="/qa/tests-global.js"></script>
        		{{#if pageTestScript}}
        			<script src="{{pageTestScript}}"></script>

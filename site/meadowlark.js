@@ -11,7 +11,40 @@ var handlebars = require('express3-handlebars')
 
 var fortune = require('./lib/fortune.js');  //include array of fortunes or curses
 
-app.set('port', process.env.PORT || 3000);
+
+function getWeatherData(){
+    return{
+    	locations:[
+    		{
+    			name: 'Portland',
+    			forecastUrl: 'http://www.wunderground.com/US/OR/Portland.html',
+    			iconUrl: 'http://icons-ak.wxug.com/i/c/k/cloudy.gif',
+    			weather: 'Overcast',
+    			temp: '54.1 F (12.3 C)',
+    		},
+    		{
+    			name: 'Bend',
+    			forecastUrl: 'http://www.wunderground.com/US/OR/Bend.html',
+    			iconUrl: 'http://icons-ak.wxug.com/i/c/k/partlycloudy.gif',
+    			weather: 'Partly Cloudy',
+    			temp: '55 F (12.8 C)',
+	   		},
+    		{
+    			name: 'Manzanita',
+    			forecastUrl: 'http://www.wunderground.com/US/OR/Manzanita.html',
+    			iconUrl: 'http://icons-ak.wxug.com/i/c/k/rain.gif',
+    			weather: 'Rain',
+    			temp: '55 F (12.8 C)',
+    		},
+    	], 
+    };
+};
+
+
+
+
+
+app.set('port', process.env.PORT || 3000);   //listen on port 3000
 
 //why this?   from p. 26
 app.use(express.static( __dirname + '/public'));
@@ -23,6 +56,15 @@ app.use(function(req, res, next){
 	next();
 	});  //followed by routes
 
+//for weather partial
+app.use(function(req, res, next){
+	if(!res.locals.partials) res.locals.partials = {};
+	res.locals.partials.weather = getWeatherData();
+	next();
+});
+
+
+/////////////////////////////////////////////////////////////////////////////
 //home
 app.get('/', function(req, res){
 		res.render('home');
@@ -30,7 +72,8 @@ app.get('/', function(req, res){
 
 //about
 app.get('/about', function(req, res){
-		//var randomFortune = fortune[Math.floor(Math.random() * fortune.length)];
+		//var randomFortune = fortune[Math.floor(Math.random() * fortune.length)]; 
+		// MOVED TO GETFORTUNE() //
 		res.render('about', {
 			fortune: fortune.getFortune(), pageTestScript: '/qa/tests-about.js' 
 		});
@@ -47,6 +90,19 @@ app.get('/tours/request-group-rate', function(req, res){
 });
 
 
+//MH info page
+app.get('/info', function(req, res){
+		res.render('info');
+});
+
+app.get('/surprise', function(req, res){
+		res.render('surprise');
+});
+
+
+app.get('/contact', function(req, res){
+		res.render('contact');
+});
 
 
 //404 catch all handler (middleware)
